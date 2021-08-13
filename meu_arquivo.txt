@@ -1,1 +1,5 @@
-Meu primeiro repositório Git.
+Meu primeiro repositório Git.O que eu vou aprender na Trybe:
+
+- Unix
+- Bash
+- Git
