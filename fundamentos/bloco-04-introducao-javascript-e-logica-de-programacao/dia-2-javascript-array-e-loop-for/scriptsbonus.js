@@ -43,7 +43,6 @@ number[3] > number[2]? Sim, troca
 
 numbers2 = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];                                 // 3)
 numbers2replic = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-multiplier = 2;
 
 for (let index = (numbers2.length - 1); index >= 0; index -= 1) {     
   if (index != (numbers2.length -1)) {
