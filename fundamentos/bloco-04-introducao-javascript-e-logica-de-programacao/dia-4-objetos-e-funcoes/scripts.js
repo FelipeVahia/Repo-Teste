@@ -43,4 +43,3 @@ for (let properties in info) {
     console.log(info[properties] + ' e ' + info2[properties]);
   }
 };
-
