@@ -1,0 +1,64 @@
+body {
+  margin: 0 2%;
+}
+
+h1 {
+  font-size: 1.6rem;
+  
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0 0 20px 0;
+
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: grey;
+    margin: 10px 3%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  figure {
+    float: left;
+    width: 45%;
+    margin-right: 3%;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: burlywood;
+    margin: 20px 5%;
+    max-width: 1300px;
+  }
+
+  figure {
+    width: 30%;
+    margin-right: 1.5%;
+  }
+}
