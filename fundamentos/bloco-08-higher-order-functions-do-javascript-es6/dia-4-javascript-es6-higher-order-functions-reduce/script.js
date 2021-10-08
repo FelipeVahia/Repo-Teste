@@ -34,7 +34,7 @@ const books = [
   },
   {
     id: 2,
-    name: 'O Senhor dos Anéis',
+    name: 'O Senhor dos Anéisaaaaaaaaaaaaaaaaaaaa',
     genre: 'Fantasia',
     author: {
       name: 'J. R. R. Tolkien',
@@ -141,8 +141,17 @@ function longestNamedBook2() {
   });
 }
 
+function longestNamedBook3() {
+  const expectedResult = books.reduce((accumulator, currentValue) => {
+    if (accumulator.name.length > currentValue.name.length) {
+      return accumulator;
+    } else { return currentValue }
+  });
+  return expectedResult;
+}
+
 console.log('----------------------- Exercício 4) -----------------------');
-console.log(longestNamedBook1());
+console.log(longestNamedBook3());
 
 // 5) Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
 
@@ -152,7 +161,7 @@ const names = [
   'Abeladerco', 'Adieidy', 'Alarucha',
 ];
 
-function containsA() {
+function containsA1() {
   return names.reduce((acc, curr) =>
      acc + curr.split('').reduce((acumulator, current) => {
         if (current === 'a' || current === 'A') return acumulator + 1;
@@ -160,27 +169,36 @@ function containsA() {
      }, 0), 0);
 }
 
+function containsA2() {
+  const values = names.reduce((acc, name) => acc.concat(name)).split('');
+  const result = values.filter((value) => value === 'A' || value === 'a').length;
+  return result;
+}
+
 console.log('----------------------- Exercício 5) -----------------------');
-console.log(containsA());
+console.log(containsA2());
 
 // 6) Agora vamos criar um novo array de objetos a partir das informações abaixo, onde cada objeto terá o formato { name: nome do aluno, average: media das notas } . Para isso vamos assumir que a posição 0 de notes refere-se ao aluno na posição 0 de students , aqui além de reduce será necessário utilizar também a função map . Dica: Você pode acessar o index do array dentro de map , e você pode ver o objeto esperado na constante expected .
 
 const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
 const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
-function studentAverage() {
+function studentAverage1() {
   const nameAndAverage = students.map((student, index) => ({
     name: student,
-    average: grades[index].reduce((acc, curr) => acc + curr),
+    average: grades[index].reduce((acc, curr) => acc + curr) / grades[index].length,
   }));
   return nameAndAverage;
 }
 
-const expected = [
-  { name: 'Pedro Henrique', average: 7.8 },
-  { name: 'Miguel', average: 9.2 },
-  { name: 'Maria Clara', average: 8.8 },
-];
+function studentAverage2() {
+  const resultStudent = students.map((student, index) => ({
+    name: `${student}`,
+    average: grades[index].reduce((acc, grade) => acc + grade) / grades[index].length
+  })) 
+
+  return resultStudent;
+}
 
 console.log('----------------------- Exercício 6) -----------------------');
-console.log(studentAverage());
+console.log(studentAverage1());
