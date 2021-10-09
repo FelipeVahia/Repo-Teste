@@ -10,8 +10,6 @@ const fruitSalad = (fruit, additional) => {
 console.log('---------------- Spread Operator 1) ----------------');
 console.log(fruitSalad(specialFruit, additionalItens));
 
-
-
 // Array Destructuring - 1) Produza o mesmo resultado do código, porém utilizando o array destructuring para recolher a função e a saudação.
 
 const saudacoes = ['Olá', (saudacao) => console.log(saudacao)];
@@ -22,8 +20,6 @@ const [saudacao, realizaSaudacao] = saudacoes
 
 console.log('---------------- Array Destructuring 1) ----------------');
 realizaSaudacao(saudacao);
-
-
 
 // Array Destructuring - 2) A seguir, temos alguns valores que estão descritos em variáveis incoerentes. Através da desestruturação de arrays, corrija os valores das variáveis.
 
@@ -36,8 +32,6 @@ let bebida = 'arroz';
 console.log('---------------- Array Destructuring 2) ----------------');
 console.log(comida, animal, bebida);
 
-
-
 // Array Destructuring - 3) O array abaixo possui alguns números que não condizem com o conteúdo que ele deveria possuir. Através de array destructuring, faça com que existam apenas números pares na variável numerosPares.
 
 let numerosPares = [1, 3, 5, 6, 8, 10, 12];
@@ -46,8 +40,6 @@ let numerosPares = [1, 3, 5, 6, 8, 10, 12];
 
 console.log('---------------- Array Destructuring 3) ----------------');
 console.log(numerosPares);
-
-
 
 // Default Destructuring - 1) Do jeito que está, quando passamos person para a função getNationality o retorno é João is undefined . Ajuste a função getNationality para que a chamada getNationality(person) retorne João is Brazilian .
 
@@ -67,8 +59,6 @@ const otherPerson = {
 console.log('---------------- Default Destructuring 1) ----------------');
 console.log(getNationality(person));
 
-
-
 // Object Property Shorthand - 1) Altere a função getPosition utilizando a property shorthand.
 
 const getPosition = (latitude, longitude) => ({
@@ -78,8 +68,6 @@ const getPosition = (latitude, longitude) => ({
 
 console.log('---------------- Object Property Shorthand 1) ----------------');
 console.log(getPosition(-19.8157, -43.9542));
-
-
 
 // Default Parameters - 1) Para praticar, escreva uma função multiply que multiplique dois números passados como argumentos. Atribua como default o valor 1 caso não seja passado nenhum valor como segundo parâmetro.
 
