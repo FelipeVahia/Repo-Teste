@@ -19,5 +19,8 @@
   "homepage": "https://github.com/felipemalli/trybe-exercicios#readme",
   "devDependencies": {
     "jest": "^27.2.5"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.5"
   }
 }
